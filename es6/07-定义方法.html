@@ -1,0 +1,26 @@
+<script>
+    // 传统方式定义方法, person 相当于类
+    const person1 = {
+        sayHi:function(){
+            console.log("person1 Hi")
+        },
+        sayHello:function(){
+            console.log("person1 Hello")
+        }
+    }
+
+    // 调用
+    person1.sayHi()
+
+    // ES6
+    const person2 = {
+        sayHi(){
+            console.log("person2 Hi")
+        },
+        sayHello(){
+            console.log("person2 Hello")
+        }
+    }
+
+    person2.sayHello()
+</script>

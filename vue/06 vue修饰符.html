@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 
+            .prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()
+            阻止事件原本的默认行为
+         -->
+        <form action="save" v-on:submit.prevent="onSubmit">
+            <input type="text" id="name" v-model="user.name" />
+            <button type="submit">保存</button>
+        </form>
+    </div>
+    <script src="js/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                user: {}
+            },
+            methods: {
+                onSubmit() {
+                    if (this.user.name) {
+                        console.log(this.user)
+                    } else {
+                        alert('请输入用户名')
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

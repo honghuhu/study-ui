@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="search()">查询</button>
+        <button @click="search2()">查询简写</button>
+        <button @click="search2">查询简写不加括号</button>
+    </div>
+    <script src="js/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                searchMap:{
+                    message: 'Hello Vue!'
+                },
+                result: {}
+            },
+            methods:{
+                search(){
+                    console.log("search...")
+                },
+                search2(){
+                    console.log("search 简写...")
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

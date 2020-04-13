@@ -1,0 +1,19 @@
+<script>
+    // 1 使用 `符号实现换行
+    let str1 = `hello,
+    es6 demo up!`
+    console.log(str1)
+
+    // 2 在 `符号里边使用表达式
+    let name = "Mike"
+    let age = 21
+
+    let str2 = `hello, ${name}, age is ${age+1}`
+    console.log(str2)
+
+    // 3 在 `符号里边调用方法
+    function f1(){
+        return "hello f1"
+    }
+    console.log(`${f1()}`)
+</script>
